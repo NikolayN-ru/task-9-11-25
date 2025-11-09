@@ -1,16 +1,18 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import { ReactNode } from "react";
 
-const layout = ({children}) => {
+const Layout = ({
+  children,
+}: Readonly<{
+  children: ReactNode;
+}>) => {
   return (
-    <div>layout
-        <div>
-            {children}
-        </div>
-        <Link href='/'>back-back</Link>
-        
+    <div>
+      layout
+      <div>{children}</div>
+      <Link href="/">back-back</Link>
     </div>
-  )
-}
+  );
+};
 
-export default layout
+export default Layout;
