@@ -1,13 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: "export",
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
   trailingSlash: true,
+  basePath: '/task-9-11-25',
+  assetPrefix: '/task-9-11-25/',
   images: {
-    unoptimized: true,
-  },
-  basePath: process.env.NODE_ENV === "production" ? "/task-9-11-25" : "",
-  assetPrefix: process.env.NODE_ENV === "production" ? "/task-9-11-25/" : "",
-};
+    unoptimized: true
+  }
+}
 
-export default nextConfig;
+module.exports = nextConfig
